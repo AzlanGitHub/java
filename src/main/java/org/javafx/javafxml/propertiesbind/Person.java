@@ -5,8 +5,10 @@ import javafx.beans.property.StringProperty;
 public class Person
 {
 
-    private final StringProperty name = new SimpleStringProperty(this, "name", "");
+    private final
+    StringProperty name = new SimpleStringProperty(this, "name", "");
 
+    // Comment for Commit, Push und Pull. Get IT
     public StringProperty nameProperty(){
         return  name;
     }

@@ -12,7 +12,8 @@ import java.io.IOException;
 public class PropertyApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-
+        // Änderungen für Github
+        // push und pull
         Person person = new Person();
         //TextField erzeugen
         TextField nameField = new TextField();
