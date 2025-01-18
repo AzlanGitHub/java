@@ -1,5 +1,4 @@
 package org.javafx.javafxml.jhotelres;
-
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -65,8 +64,7 @@ public class KundenController {
     }
 
 
-    public ObservableList<Kunde> readData()
-    {
+    public ObservableList<Kunde> readData(){
         ObservableList<Kunde> kunde =  FXCollections.observableArrayList();
         // Schritt 1 : url von der Datenbank notieren
         String url = "jdbc:sqlite:src/main/resources/kundschaft.db";
@@ -95,10 +93,10 @@ public class KundenController {
                 ));
             }
 
-        }catch (SQLException e){ System.out.println(e.getMessage()); }
-
+        }catch (SQLException e){
+            System.out.println(e.getMessage());
+        }
         return kunde;
-
     }
 
     public void createKunde(ActionEvent actionEvent) {
