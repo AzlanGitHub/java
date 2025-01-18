@@ -6,19 +6,11 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.VBox;
-
-import java.awt.event.ActionListener;
 import java.sql.*;
 
 public class KundenController {
 
-    @FXML private Button btnCreate;
-    @FXML private Button btnRead;
-    @FXML private Button btnUpdate;
-    @FXML private Button btnDelete;
     @FXML private VBox vbCenter;
     @FXML private TextField tfVorname;
     @FXML private TextField tfNachname;
@@ -40,7 +32,6 @@ public class KundenController {
     @FXML private TableColumn<Kunde, String> tcPostleitzahl;
     @FXML private TableColumn<Kunde, String> tcStadt;
     @FXML private  TableColumn<Kunde, String> tcLand;
-
 
     @FXML
     public void initialize() {
@@ -73,9 +64,6 @@ public class KundenController {
         tcLand.prefWidthProperty().bind(tvKunde.widthProperty().multiply(0.10));
     }
 
-    public void readKunde(ActionEvent actionEvent){
-
-    }
 
     public ObservableList<Kunde> readData()
     {
@@ -107,7 +95,7 @@ public class KundenController {
                 ));
             }
 
-        }catch (SQLException e){ e.printStackTrace(); }
+        }catch (SQLException e){ System.out.println(e.getMessage()); }
 
         return kunde;
 
@@ -146,7 +134,7 @@ public class KundenController {
             pstmt.executeUpdate();
 
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
         // Optionally, refresh the TableView
         tvKunde.setItems(readData());
@@ -174,7 +162,7 @@ public class KundenController {
             pstmt.executeUpdate();
 
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
     }
 
@@ -191,7 +179,7 @@ public class KundenController {
             pstmt.executeUpdate();
 
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
     }
 
@@ -220,10 +208,8 @@ public class KundenController {
                 alert.showAndWait();
             }
         }
-
         // Refresh the TableView
         tvKunde.setItems(readData());
-
         // Clear the input fields
         tfVorname.clear();
         tfNachname.clear();
@@ -235,5 +221,4 @@ public class KundenController {
         tfStadt.clear();
         tfLand.clear();
     }
-
 }
