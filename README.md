@@ -32,7 +32,7 @@ Dieses Projekt ermöglicht das Speichern und Löschen von Kundendaten.
 ## Voraussetzungen
 - Java 17+
 - Maven
-- SQLite (falls eine Datenbank verwendet wird)
+- SQLite 
 
 ## Lizenz
 Dieses Projekt steht unter der MIT-Lizenz. Weitere Informationen siehe [LICENSE](LICENSE).
