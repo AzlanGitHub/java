@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="846.0" prefWidth="1129.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.javafx.javafxml.jhotelres.KundenController">
+   <left>
+      <VBox prefHeight="630.0" prefWidth="159.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Vorname">
+               <VBox.margin>  <Insets left="10.0" top="15.0" />  </VBox.margin>
+               <font> <Font size="20.0" />  </font>
+            </Label>
+            <Label text="Nachname">
+               <VBox.margin> <Insets left="10.0" top="5.0" />  </VBox.margin>
+               <font> <Font size="20.0" />  </font>
+            </Label>
+            <Label text="Geburtsdatum">
+               <VBox.margin> <Insets left="10.0" top="5.0" />  </VBox.margin>
+               <font> <Font size="20.0" /> </font>
+            </Label>
+            <Label text="Alter">
+               <VBox.margin> <Insets left="10.0" right="15.0" top="10.0" /> </VBox.margin>
+               <font> <Font size="20.0" /> </font>
+            </Label>
+            <Label text="Strasse">
+               <font><Font size="18.0" /> </font>
+               <VBox.margin> <Insets left="10.0" top="10.0" /> </VBox.margin>
+            </Label>
+            <Label text="Nr">
+               <VBox.margin>  <Insets left="10.0" top="10.0" /> </VBox.margin>
+               <font> <Font size="18.0" /> </font>
+            </Label>
+            <Label text="Postleitzahl">
+               <VBox.margin>  <Insets left="10.0" top="10.0" /> </VBox.margin>
+               <font> <Font size="18.0" /> </font>
+            </Label>
+            <Label text="Stadt">
+               <VBox.margin>  <Insets left="10.0" top="10.0" />  </VBox.margin>
+               <font>  <Font size="18.0" /> </font>
+            </Label>
+            <Label text="Land">
+               <VBox.margin>  <Insets left="10.0" top="10.0" />  </VBox.margin>
+               <font>  <Font size="18.0" /> </font>
+            </Label>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox fx:id="vbCenter" prefHeight="623.0" prefWidth="838.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="tfVorname">
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="tfNachname">
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="tfGeburtsdatum">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font></TextField>
+            <TextField fx:id="tfAlter">
+               <font>
+                  <Font size="14.0" />
+               </font></TextField>
+            <TextField fx:id="tfStrasse">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="tfNr">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="tfPostleitzahl">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="tfStadt">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="tfLand">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </TextField>
+            <TableView fx:id="tvKunde" editable="true" prefHeight="476.0" prefWidth="798.0">
+              <columns>
+                  <TableColumn fx:id="tcID" prefWidth="43.0" text="ID" />
+                <TableColumn fx:id="tcVorname" prefWidth="141.0" text="Vorname" />
+                <TableColumn fx:id="tcNachname" prefWidth="150.0" text="Nachname" />
+                  <TableColumn fx:id="tcGeburtsdatum" prefWidth="92.0" text="Geburtsdatum" />
+                  <TableColumn fx:id="tcAlter" prefWidth="47.0" text="Alter" />
+                  <TableColumn fx:id="tcStrasse" prefWidth="192.0" text="Strasse" />
+                  <TableColumn fx:id="tcNr" minWidth="9.0" prefWidth="34.0" text="Nr" />
+                  <TableColumn fx:id="tcPostleitzahl" prefWidth="53.0" text="Postleitzahl" />
+                  <TableColumn fx:id="tcStadt" prefWidth="75.0" text="Stadt" />
+                  <TableColumn fx:id="tcLand" prefWidth="93.0" text="Land" />
+              </columns>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </TableView>
+         </children>
+         <padding>
+            <Insets right="10.0" />
+         </padding>
+      </VBox>
+   </center>
+   <bottom>
+      <HBox prefHeight="78.0" prefWidth="938.0">
+         <Button fx:id="btnCreate" mnemonicParsing="false" onAction="#createKunde" text="create">
+            <HBox.margin>
+               <Insets left="10.0" right="10.0" top="10.0" />
+            </HBox.margin>
+            <font>
+               <Font size="20.0" />
+            </font></Button>
+         <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#deleteKunde" text="delete">
+            <HBox.margin>
+               <Insets bottom="10.0" left="100.0" right="10.0" top="10.0" />
+            </HBox.margin>
+            <font>
+               <Font size="20.0" />
+            </font></Button>
+      </HBox>
+   </bottom>
+</BorderPane>
