@@ -10,11 +10,11 @@ Dieses Projekt ermöglicht das Speichern und Löschen von Kundendaten.
 ## Installation
 1. Repository klonen:
    ```bash
-   git clone https://github.com/dein-benutzername/dein-repo.git
+   git clone https://github.com/AzlanGitHub/java.git
    ```
 2. In das Projektverzeichnis wechseln:
    ```bash
-   cd dein-repo
+   cd AzlanGitHub
    ```
 3. Abhängigkeiten installieren (falls erforderlich):
    ```bash
