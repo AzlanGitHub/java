@@ -14,7 +14,8 @@ Dieses Projekt ermöglicht das Speichern und Löschen von Kundendaten.
    ```
 2. In das Projektverzeichnis wechseln:
    ```bash
-   cd AzlanGitHub
+   cd projekverzeichnis
+
    ```
 3. Abhängigkeiten installieren (falls erforderlich):
    ```bash
