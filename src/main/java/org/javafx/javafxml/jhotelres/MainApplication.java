@@ -15,7 +15,6 @@ public class MainApplication extends Application {
 
         Locale locale = new Locale("de");
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("KundenUI.fxml"));
-        fxmlLoader.setResources(ResourceBundle.getBundle("Bundle", locale));
         Scene scene = new Scene(fxmlLoader.load(), 1000, 800);
         stage.setTitle("Hello!");
         stage.setScene(scene);
