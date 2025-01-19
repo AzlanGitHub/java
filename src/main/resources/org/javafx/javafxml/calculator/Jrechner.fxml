@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.*?>
+<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.layout.*?>
@@ -8,20 +9,23 @@
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.javafx.javafxml.calculator.JRechnerController">
    <children>
-      <Label fx:id="lblErgebnis" prefHeight="55.0" prefWidth="297.0" text="0">
+      <Label fx:id="lblErgebnis" prefHeight="55.0" prefWidth="297.0" style="-fx-background-radius: 20; -fx-background-color: White;" text="0">
          <font>
             <Font size="20.0" />
          </font>
          <VBox.margin>
-            <Insets bottom="20.0" left="10.0" right="10.0" />
+            <Insets bottom="20.0" left="10.0" right="10.0" top="10.0" />
          </VBox.margin>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
       </Label>
       <GridPane prefHeight="300.0" prefWidth="428.0">
         <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.0" minWidth="10.0" prefWidth="83.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="286.0" minWidth="10.0" prefWidth="72.0" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="359.0" minWidth="10.0" prefWidth="78.0" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="365.0" minWidth="10.0" prefWidth="98.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.0" minWidth="30.0" prefWidth="60.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="286.0" minWidth="30.0" prefWidth="60.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="359.0" minWidth="30.0" prefWidth="60.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="365.0" minWidth="30.0" prefWidth="60.0" />
         </columnConstraints>
         <rowConstraints>
             <RowConstraints minHeight="25.0" prefHeight="50.0" vgrow="SOMETIMES" />
@@ -32,7 +36,7 @@
             <RowConstraints minHeight="30.0" prefHeight="50.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="btnKehrwert" defaultButton="true" mnemonicParsing="false" onAction="#setKehrtwert" prefHeight="44.0" prefWidth="141.0" text="1/x" textAlignment="RIGHT" GridPane.rowIndex="1">
+            <Button fx:id="btnKehrwert" mnemonicParsing="false" onAction="#setKehrtwert" prefHeight="44.0" prefWidth="141.0" style="-fx-background-radius: 20;" text="1/x" textAlignment="RIGHT" GridPane.rowIndex="1">
                <font>
                   <Font size="20.0" />
                </font>
@@ -40,7 +44,7 @@
                   <Insets left="5.0" />
                </GridPane.margin>
             </Button>
-            <Button fx:id="btnSieben" mnemonicParsing="false" onAction="#setSieben" prefHeight="44.0" prefWidth="140.0" text="7" GridPane.rowIndex="2">
+            <Button fx:id="btnSieben" mnemonicParsing="false" onAction="#setSieben" prefHeight="44.0" prefWidth="140.0" style="-fx-background-radius: 20;" text="7" GridPane.rowIndex="2">
                <font>
                   <Font size="20.0" />
                </font>
@@ -48,7 +52,7 @@
                   <Insets left="5.0" />
                </GridPane.margin>
             </Button>
-            <Button fx:id="btnVier" mnemonicParsing="false" onAction="#setVier" prefHeight="44.0" prefWidth="149.0" text="4" GridPane.rowIndex="3">
+            <Button fx:id="btnVier" mnemonicParsing="false" onAction="#setVier" prefHeight="44.0" prefWidth="149.0" style="-fx-background-radius: 20;" text="4" GridPane.rowIndex="3">
                <font>
                   <Font size="20.0" />
                </font>
@@ -56,7 +60,7 @@
                   <Insets left="5.0" />
                </GridPane.margin>
             </Button>
-            <Button fx:id="btnEins" mnemonicParsing="false" onAction="#setEins" prefHeight="44.0" prefWidth="142.0" text="1" GridPane.rowIndex="4">
+            <Button fx:id="btnEins" mnemonicParsing="false" onAction="#setEins" prefHeight="44.0" prefWidth="142.0" style="-fx-background-radius: 20;" text="1" GridPane.rowIndex="4">
                <font>
                   <Font size="20.0" />
                </font>
@@ -64,7 +68,7 @@
                   <Insets left="5.0" />
                </GridPane.margin>
             </Button>
-            <Button fx:id="btnVorzeichen" mnemonicParsing="false" onAction="#setVorzeichen" prefHeight="44.0" prefWidth="137.0" text="+/-" GridPane.rowIndex="5">
+            <Button fx:id="btnVorzeichen" mnemonicParsing="false" onAction="#setVorzeichen" prefHeight="44.0" prefWidth="137.0" style="-fx-background-radius: 20;" text="+/-" GridPane.rowIndex="5">
                <font>
                   <Font size="20.0" />
                </font>
@@ -72,7 +76,7 @@
                   <Insets left="5.0" />
                </GridPane.margin>
             </Button>
-            <Button fx:id="btnQuadrat" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#setExp" prefHeight="44.0" prefWidth="139.0" text="x²" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Button fx:id="btnQuadrat" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#setExp" prefHeight="44.0" prefWidth="139.0" style="-fx-background-radius: 20;" text="x²" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <font>
                   <Font size="20.0" />
                </font>
@@ -80,7 +84,7 @@
                   <Insets left="5.0" />
                </GridPane.margin>
             </Button>
-            <Button fx:id="btnAcht" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#setAcht" prefHeight="44.0" prefWidth="154.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <Button fx:id="btnAcht" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#setAcht" prefHeight="44.0" prefWidth="154.0" style="-fx-background-radius: 20;" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <font>
                   <Font size="20.0" />
                </font>
@@ -88,7 +92,7 @@
                   <Insets left="5.0" />
                </GridPane.margin>
             </Button>
-            <Button fx:id="btnFunf" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#setFunf" prefHeight="44.0" prefWidth="138.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <Button fx:id="btnFunf" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#setFunf" prefHeight="44.0" prefWidth="138.0" style="-fx-background-radius: 20;" text="5" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <font>
                   <Font size="20.0" />
                </font>
@@ -96,7 +100,7 @@
                   <Insets left="5.0" />
                </GridPane.margin>
             </Button>
-            <Button fx:id="btnZwei" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#setZwei" prefHeight="44.0" prefWidth="141.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <Button fx:id="btnZwei" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#setZwei" prefHeight="44.0" prefWidth="141.0" style="-fx-background-radius: 20;" text="2" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <font>
                   <Font size="20.0" />
                </font>
@@ -104,7 +108,7 @@
                   <Insets left="5.0" />
                </GridPane.margin>
             </Button>
-            <Button fx:id="btnNull" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#setNull" prefHeight="44.0" prefWidth="137.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+            <Button fx:id="btnNull" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#setNull" prefHeight="44.0" prefWidth="137.0" style="-fx-background-radius: 20;" text="0" GridPane.columnIndex="1" GridPane.rowIndex="5">
                <font>
                   <Font size="20.0" />
                </font>
@@ -112,7 +116,7 @@
                   <Insets left="5.0" />
                </GridPane.margin>
             </Button>
-            <Button fx:id="btnWurzeln" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#setWurzeln" prefHeight="44.0" prefWidth="153.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <Button fx:id="btnWurzeln" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#setWurzeln" prefHeight="44.0" prefWidth="153.0" style="-fx-background-radius: 20;" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <font>
                   <Font size="20.0" />
                </font>
@@ -123,7 +127,7 @@
                   <Glow />
                </effect>
             </Button>
-            <Button fx:id="btnNeun" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#setNeun" prefHeight="44.0" prefWidth="144.0" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <Button fx:id="btnNeun" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#setNeun" prefHeight="44.0" prefWidth="144.0" style="-fx-background-radius: 20;" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <font>
                   <Font size="20.0" />
                </font>
@@ -131,7 +135,7 @@
                   <Insets left="5.0" />
                </GridPane.margin>
             </Button>
-            <Button fx:id="btnSechs" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#setSechs" prefHeight="44.0" prefWidth="145.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="3">
+            <Button fx:id="btnSechs" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#setSechs" prefHeight="44.0" prefWidth="145.0" style="-fx-background-radius: 20;" text="6" GridPane.columnIndex="2" GridPane.rowIndex="3">
                <font>
                   <Font size="20.0" />
                </font>
@@ -139,7 +143,7 @@
                   <Insets left="5.0" />
                </GridPane.margin>
             </Button>
-            <Button fx:id="btnDrei" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#setDrei" prefHeight="44.0" prefWidth="149.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="4">
+            <Button fx:id="btnDrei" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#setDrei" prefHeight="44.0" prefWidth="149.0" style="-fx-background-radius: 20;" text="3" GridPane.columnIndex="2" GridPane.rowIndex="4">
                <font>
                   <Font size="20.0" />
                </font>
@@ -147,7 +151,7 @@
                   <Insets left="5.0" />
                </GridPane.margin>
             </Button>
-            <Button fx:id="btnKomma" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#setKomma" prefHeight="44.0" prefWidth="143.0" text="," GridPane.columnIndex="2" GridPane.rowIndex="5">
+            <Button fx:id="btnKomma" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#setKomma" prefHeight="44.0" prefWidth="143.0" style="-fx-background-radius: 20;" text="," GridPane.columnIndex="2" GridPane.rowIndex="5">
                <font>
                   <Font size="20.0" />
                </font>
@@ -155,7 +159,7 @@
                   <Insets left="5.0" />
                </GridPane.margin>
             </Button>
-            <Button fx:id="btnDivision" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#setDivision" prefHeight="44.0" prefWidth="171.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+            <Button fx:id="btnDivision" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#setDivision" prefHeight="44.0" prefWidth="171.0" style="-fx-background-radius: 20;" GridPane.columnIndex="3" GridPane.rowIndex="1">
                <font>
                   <Font size="20.0" />
                </font>
@@ -163,7 +167,7 @@
                   <Insets left="5.0" right="5.0" />
                </GridPane.margin>
             </Button>
-            <Button fx:id="btnMal" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#setMal" prefHeight="44.0" prefWidth="163.0" text="x" GridPane.columnIndex="3" GridPane.rowIndex="2">
+            <Button fx:id="btnMal" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#setMal" prefHeight="44.0" prefWidth="163.0" style="-fx-background-radius: 20;" text="x" GridPane.columnIndex="3" GridPane.rowIndex="2">
                <font>
                   <Font size="20.0" />
                </font>
@@ -171,7 +175,7 @@
                   <Insets left="5.0" right="5.0" />
                </GridPane.margin>
             </Button>
-            <Button fx:id="btnMinus" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#setMinus" prefHeight="44.0" prefWidth="170.0" text="-" GridPane.columnIndex="3" GridPane.rowIndex="3">
+            <Button fx:id="btnMinus" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#setMinus" prefHeight="44.0" prefWidth="170.0" style="-fx-background-radius: 20;" text="-" GridPane.columnIndex="3" GridPane.rowIndex="3">
                <font>
                   <Font size="20.0" />
                </font>
@@ -179,7 +183,7 @@
                   <Insets left="5.0" right="5.0" />
                </GridPane.margin>
             </Button>
-            <Button fx:id="btnPlus" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#setPlus" prefHeight="44.0" prefWidth="168.0" text="+" GridPane.columnIndex="3" GridPane.rowIndex="4">
+            <Button fx:id="btnPlus" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#setPlus" prefHeight="44.0" prefWidth="168.0" style="-fx-background-radius: 20;" text="+" GridPane.columnIndex="3" GridPane.rowIndex="4">
                <font>
                   <Font size="20.0" />
                </font>
@@ -187,7 +191,7 @@
                   <Insets left="5.0" right="5.0" />
                </GridPane.margin>
             </Button>
-            <Button fx:id="btnGleich" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#getErgebnis" prefHeight="44.0" prefWidth="165.0" text="=" GridPane.columnIndex="3" GridPane.rowIndex="5">
+            <Button fx:id="btnGleich" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#getErgebnis" prefHeight="44.0" prefWidth="165.0" style="-fx-background-radius: 20;" text="=" GridPane.columnIndex="3" GridPane.rowIndex="5">
                <font>
                   <Font size="20.0" />
                </font>
@@ -195,7 +199,7 @@
                   <Insets left="5.0" right="5.0" />
                </GridPane.margin>
             </Button>
-            <Button fx:id="btnModulo" cancelButton="true" mnemonicParsing="false" onAction="#setModulo" prefHeight="44.0" prefWidth="158.0" text="\%">
+            <Button fx:id="btnModulo" cancelButton="true" mnemonicParsing="false" onAction="#setModulo" prefHeight="44.0" prefWidth="158.0" style="-fx-background-radius: 15;" text="\%">
                <font>
                   <Font size="20.0" />
                </font>
@@ -203,7 +207,7 @@
                   <Insets left="5.0" />
                </GridPane.margin>
             </Button>
-            <Button fx:id="btnCE" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#setClearEntry" prefHeight="44.0" prefWidth="147.0" text="CE" GridPane.columnIndex="1">
+            <Button fx:id="btnCE" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#setClearEntry" prefHeight="44.0" prefWidth="147.0" style="-fx-background-radius: 10;" text="CE" GridPane.columnIndex="1">
                <font>
                   <Font size="20.0" />
                </font>
@@ -211,7 +215,7 @@
                   <Insets left="5.0" />
                </GridPane.margin>
             </Button>
-            <Button fx:id="btnClear" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#setClearAll" prefHeight="44.0" prefWidth="143.0" text="c" GridPane.columnIndex="2">
+            <Button fx:id="btnClear" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#setClearAll" prefHeight="44.0" prefWidth="143.0" style="-fx-background-radius: 10;" text="c" GridPane.columnIndex="2">
                <font>
                   <Font size="20.0" />
                </font>
@@ -219,7 +223,7 @@
                   <Insets left="5.0" />
                </GridPane.margin>
             </Button>
-            <Button fx:id="btnBackspace" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#setBackspace" prefHeight="44.0" prefWidth="170.0" GridPane.columnIndex="3">
+            <Button fx:id="btnBackspace" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#setBackspace" prefHeight="44.0" prefWidth="170.0" style="-fx-background-radius: 10;" GridPane.columnIndex="3">
                <font>
                   <Font size="20.0" />
                </font>
@@ -230,4 +234,10 @@
          </children>
       </GridPane>
    </children>
+   <effect>
+      <ColorAdjust />
+   </effect>
+   <cursor>
+      <Cursor fx:constant="HAND" />
+   </cursor>
 </VBox>
