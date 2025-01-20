@@ -20,6 +20,14 @@
             <Insets />
          </opaqueInsets>
       </Label>
+      <Label fx:id="lblResult" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="302.0" text="0" textAlignment="RIGHT">
+         <VBox.margin>
+            <Insets right="10.0" />
+         </VBox.margin>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
       <GridPane prefHeight="300.0" prefWidth="428.0">
         <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.0" minWidth="30.0" prefWidth="60.0" />
