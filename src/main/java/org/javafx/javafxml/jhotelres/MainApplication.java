@@ -13,7 +13,6 @@ public class MainApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
 
-        Locale locale = new Locale("de");
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("KundenUI.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1000, 800);
         stage.setTitle("Hello!");
