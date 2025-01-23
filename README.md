@@ -1,6 +1,6 @@
 # Taschenrechner
 
-Ein einfacher Taschenrechner mit JavaFX, der Grundrechenarten sowie erweiterte Funktionen wie Wurzelziehen, Kehrwert und CE-Unterstützung bietet.
+Ein einfacher Taschenrechner mit JavaFX, der Grundrechenarten bietet.
 
 ## 📌 Features
 ✅ Addition, Subtraktion, Multiplikation, Division  
