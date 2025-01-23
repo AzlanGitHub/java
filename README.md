@@ -4,8 +4,7 @@ Ein einfacher Taschenrechner mit JavaFX, der Grundrechenarten sowie erweiterte F
 
 ## 📌 Features
 ✅ Addition, Subtraktion, Multiplikation, Division  
-✅ Quadratwurzel (√)  
-✅ Kehrwert (1/x)  
+✅ Modulo   
 ✅ Backspace (⌫) zum Löschen der letzten Ziffer  
 ✅ CE (Clear Entry) zum Löschen der aktuellen Eingabe  
 ✅ C (Clear) zum Zurücksetzen des gesamten Rechners  
@@ -15,7 +14,7 @@ Ein einfacher Taschenrechner mit JavaFX, der Grundrechenarten sowie erweiterte F
 ### Voraussetzungen:
 - Java 17 oder neuer
 - JavaFX
-- IntelliJ IDEA oder Eclipse (optional)
+- IntelliJ IDEA 
 
 ### Installation:
 1. **Repository klonen:**
@@ -47,6 +46,7 @@ Taschenrechner/
 _Füge hier Screenshots deines Taschenrechners ein._
 
 ## 🚀 Geplante Features
+🔹 Mathmatische Operationen Exponent, Wurzeln, kehrwert
 🔹 Prozentrechnung (%)  
 🔹 Speicherfunktionen (M+, M-, MR, MC)  
 🔹 Dark Mode  
