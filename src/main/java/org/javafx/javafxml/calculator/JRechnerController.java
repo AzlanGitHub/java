@@ -7,7 +7,7 @@ import net.objecthunter.exp4j.Expression;
 import net.objecthunter.exp4j.ExpressionBuilder;
 
 public class JRechnerController {
-    @FXML private Button btnWurzeln;
+
     @FXML private Button btnDivision;
     @FXML private Button btnBackspace;
     @FXML private Label  lblErgebnis;
@@ -18,20 +18,19 @@ public class JRechnerController {
 
     @FXML public void initialize(){
         System.out.println("Die Anwendung wurde gestartet!");
-        btnWurzeln.setText("\u221A");
         btnDivision.setText("\u00F7");
         btnBackspace.setText("\u232B");
     }
 
-    public void setKehrtwert(ActionEvent actionEvent) {
-    }
 
     public void setSieben(ActionEvent actionEvent) {
         lblErgebnis.setText(lblErgebnis.getText() + "7");
+        tempX = 7.0;
     }
 
     public void setVier(ActionEvent actionEvent) {
         lblErgebnis.setText(lblErgebnis.getText() + "4");
+        tempX = 4.0;
     }
 
 
@@ -42,30 +41,37 @@ public class JRechnerController {
         else {
             lblErgebnis.setText(lblErgebnis.getText() + "1");
         }
+        tempX = 1.0;
     }
 
     public void setAcht(ActionEvent actionEvent) {
         lblErgebnis.setText(lblErgebnis.getText() + "8");
+        tempX = 8.0;
     }
 
     public void setFunf(ActionEvent actionEvent) {
         lblErgebnis.setText(lblErgebnis.getText() + "5");
+        tempX = 5.0;
     }
 
     public void setNeun(ActionEvent actionEvent) {
         lblErgebnis.setText(lblErgebnis.getText() + "9");
+        tempX = 9.0;
     }
 
     public void setSechs(ActionEvent actionEvent) {
         lblErgebnis.setText(lblErgebnis.getText() + "6");
+        tempX = 6.0;
     }
 
     public void setDrei(ActionEvent actionEvent) {
         lblErgebnis.setText(lblErgebnis.getText() + "3");
+        tempX = 3.0;
     }
 
     public void setZwei(ActionEvent actionEvent) {
         lblErgebnis.setText(lblErgebnis.getText() + "2");
+        tempX = 2.0;
     }
 
     public void setNull(ActionEvent actionEvent) {
@@ -74,17 +80,6 @@ public class JRechnerController {
         } else
             lblErgebnis.setText(lblErgebnis.getText() + "0");
     }
-
-    public void setVorzeichen(ActionEvent actionEvent) {
-    }
-
-    public void setExp(ActionEvent actionEvent) {
-    }
-
-    public void setWurzeln(ActionEvent actionEvent) {
-    }
-
-
     public void setKomma(ActionEvent actionEvent) {
         String text = lblErgebnis.getText();
 
@@ -102,11 +97,19 @@ public class JRechnerController {
             lblErgebnis.setText(text + ".");
         }
     }
-
-
     public void setDivision(ActionEvent actionEvent) {
-    }
+        String cText = lblErgebnis.getText();
+        if (cText.endsWith("-") || cText.endsWith("+") || cText.endsWith("*") || cText.endsWith("%") || cText.isEmpty()) {
+                return;
+        }
+        if(lblErgebnis.getText().endsWith("/") || lblErgebnis.getText().length() == 0){
+            return;
+        }else {
+            lblErgebnis.setText(lblErgebnis.getText()+ "/");
+        }
 
+
+    }
     public void setMal(ActionEvent actionEvent) {
         String cText = lblErgebnis.getText();
 
@@ -116,29 +119,26 @@ public class JRechnerController {
         }
 
         // Wenn das letzte Zeichen eine Rechenoperation ist, auch nichts tun
-        if (cText.endsWith("-") || cText.endsWith("+") || cText.endsWith("/")) {
+        if (cText.endsWith("-") || cText.endsWith("+") || cText.endsWith("/") || cText.endsWith("%")) {
             return;
         }
 
         lblErgebnis.setText(cText + "*");
     }
-
     public void setMinus(ActionEvent actionEvent) {
         String cText = lblErgebnis.getText();
-
         // Wenn der Text leer ist oder bereits ein Plus am Ende steht, dann nichts tun
         if (cText.length() == 0 || cText.endsWith("-")) {
             return;
         }
 
         // Wenn das letzte Zeichen eine Rechenoperation ist, auch nichts tun
-        if (cText.endsWith("+") || cText.endsWith("*") || cText.endsWith("/")) {
+        if (cText.endsWith("+") || cText.endsWith("*") || cText.endsWith("/") || cText.endsWith("%")) {
             return;
         }
 
         lblErgebnis.setText(cText + "-");
     }
-
     public void setPlus(ActionEvent actionEvent) {
         if(lblErgebnis.getText().endsWith(".")){
             lblErgebnis.setText(lblErgebnis.getText().substring(0, lblErgebnis.getText().length() - 1));
@@ -151,13 +151,13 @@ public class JRechnerController {
         }
 
         // Wenn das letzte Zeichen eine Rechenoperation ist, auch nichts tun
-        if (cText.endsWith("-") || cText.endsWith("*") || cText.endsWith("/")) {
+        if (cText.endsWith("-") || cText.endsWith("*") || cText.endsWith("/") || cText.endsWith("%")) {
             return;
         }
 
         lblErgebnis.setText(cText + "+");
-    }
 
+    }
     public void getErgebnis(ActionEvent actionEvent) {
         try {
             char lastChar = lblErgebnis.getText().charAt(lblErgebnis.getText().length() - 1);
@@ -166,10 +166,7 @@ public class JRechnerController {
             {
                 lblErgebnis.setText(lblErgebnis.getText().substring(0, lblErgebnis.getText().length() - 1));
             }
-            else {
-                
-                System.out.println("Das letzte Zeichen ist kein mathematischer Operator.");
-            }
+
 
             // Ausdruck mit exp4j auswerten
             Expression exp = new ExpressionBuilder( lblErgebnis.getText()).build();
@@ -182,11 +179,20 @@ public class JRechnerController {
             lblResult.setText("Fehler");
         }
     }
-
-
     public void setModulo(ActionEvent actionEvent) {
-    }
+        String cText = lblErgebnis.getText();
+        if (cText.endsWith("-") || cText.endsWith("*") || cText.endsWith("/") || cText.endsWith("+")) {
+            return;
+        }
+        if(lblErgebnis.getText().isEmpty() || lblErgebnis.getText().endsWith("%")){
+            return;
+        }else{
+            lblErgebnis.setText(lblErgebnis.getText() +  "%" );
+        }
 
+
+
+    }
     public void setClearEntry(ActionEvent actionEvent) {
         // Wenn lblErgebnis kein Rechenzeichen enthält
         String currentText = lblErgebnis.getText();
@@ -211,12 +217,9 @@ public class JRechnerController {
             lblErgebnis.setText(currentText.substring(0, lastIndex + 1));
         }
     }
-
-
     public void setClearAll(ActionEvent actionEvent) {
         lblErgebnis.setText("");
     }
-
     public void setBackspace(ActionEvent actionEvent) {
 
         if(lblErgebnis.getText().length() > 0){
