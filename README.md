@@ -11,7 +11,7 @@ Installation
 Um das Projekt zu installieren, folge diesen Schritten:
 Klone das Repository:
 sh
-git clone https://github.com/dein-benutzername/taschenrechner.git
+git clone https://github.com/AzlanGitHub/java.git
 Wechsel in das Projektverzeichnis:
 sh
 cd taschenrechner
@@ -23,8 +23,7 @@ Um den Taschenrechner zu starten, führe die Main-Klasse in deiner IDE aus oder 
 sh
 mvn exec:java -Dexec.mainClass="com.beispiel.taschenrechner.Main"
 Beitragende
-Dein Name
-
+Azlan Ainto
 
 ### Lizenz ###
 Dieses Projekt ist unter der MIT-Lizenz lizenziert. Siehe die Lizenz unten für weitere Details.
