@@ -110,14 +110,6 @@ If you want to run unit tests, you can do so using Maven:
 mvn test
 
 
-License
-This project is licensed under the MIT License – see the LICENSE file for details.
-
-
-
-
-
-
 
 ## 📄 Lizenz
 Dieses Projekt steht unter der MIT-Lizenz – siehe die **LICENSE**-Datei für Details.
