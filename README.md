@@ -10,31 +10,28 @@ Dieses Projekt ermöglicht das Speichern und Löschen von Kundendaten.
 - Kunden löschen (delete customer)
 
 ## Installation
-1. Repository klonen:
+1. Repository klonen ( clone repository ):
    ```bash
    git clone https://github.com/AzlanGitHub/java.git
    ```
-2. In das Projektverzeichnis wechseln:
+2. In das Projektverzeichnis wechseln ( change directory ) :
    ```bash
    cd projekverzeichnis
 
    ```
-3. Abhängigkeiten installieren (falls erforderlich):
+3. Abhängigkeiten installieren ( install dependencies):
    ```bash
    mvn install
    ```
 
-## Nutzung
-1. Anwendung starten:
+## Nutzung (usage)
+1. Anwendung starten (start application :
    ```bash
    java -jar kundenverwaltung.jar
    ```
-2. Kunden hinzufügen oder löschen über die Benutzeroberfläche oder API.
 
-## Voraussetzungen
-- Java 17+
-- Maven
-- SQLite 
+
+HOW TO CREATE RUNNABLE Application(jar file)
 ##########################################
 
 
