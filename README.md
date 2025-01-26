@@ -1,11 +1,13 @@
 # Kundenverwaltung( Customer Management Application  )
 
-## Beschreibung
+## Beschreibung ( Description )
+
 Dieses Projekt ermöglicht das Speichern und Löschen von Kundendaten.
+(This project allows for the storage and deletion of customer data. )
 
 ## Features
-- Kunden hinzufügen
-- Kunden löschen
+- Kunden hinzufügen (add customer) 
+- Kunden löschen (delete customer)
 
 ## Installation
 1. Repository klonen:
