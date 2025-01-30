@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="de.demojfx.AppController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+<!--    <Label text="Wähle ein Element aus der Liste:" />-->
+<!--    <ListView fx:id="listView" prefHeight="200" />-->
+<!--    <Label fx:id="selectedItemLabel" text="Ausgewähltes Element wird hier angezeigt" />-->
+
+    <Label text="Choose one Item  Item:" />
+    <ListView fx:id="listView" editable="true" prefHeight="500" prefWidth="500" />
+    <Label fx:id="selectedItemLabel" text="Chosen Item : ." wrapText="true" />
+    <HBox alignment="CENTER" spacing="10">
+        <Button onAction="#addProdcut" text="add" />
+        <Button onAction="#editProduct" text="edit" />
+        <Button onAction="#deleteProduct" text="delete" />
+    </HBox>
+</VBox>
