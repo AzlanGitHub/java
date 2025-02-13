@@ -14,15 +14,14 @@ Maven (for building the application)
 IDE (e.g., IntelliJ IDEA, Eclipse)
 Installation
 Clone the repository:
-bash
+bash: 
 git clone https://github.com/yourusername/todo-application.git
 Navigate to the project directory:
-bash
+bash:
 cd todo-application
-Build the project using Maven:
-
-bash
-mvn clean install
+Build the project using Maven
+bash:
+mvn clean install -
 After the build completes, you can run the application using the following command:
 
 bash
